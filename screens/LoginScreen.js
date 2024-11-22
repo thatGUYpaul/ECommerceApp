@@ -7,12 +7,12 @@ export default function LoginScreen({ navigation }) {
 
   const handleLogin = () => {
     if (username.trim() && password.trim()) {
-      alert(`Welcome, ${username}!`);
-      // Navigate to home or main app screen after login
+      navigation.navigate('Home', { username });
     } else {
       alert('Please enter both username and password');
     }
   };
+  
 
   return (
     <View style={styles.container}>
